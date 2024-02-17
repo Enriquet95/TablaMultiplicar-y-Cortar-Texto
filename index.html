@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarea</title>
+<script>
+    function CargarDatos(){
+        var v_apellidos=prompt("¿Cuales son tus apellidos?");
+        document.getElementById("apellidos").value=v_apellidos;
+
+        var v_nombres=prompt("¿Cuales son tus nombres?");
+        document.getElementById("nombres").value=v_nombres;
+
+        var v_dni=prompt("¿Cual es tu DNI ?");
+        document.getElementById("DNI").value=v_dni;
+      
+        var v_resul=v_apellidos.substring(0,2)+v_nombres.slice(-2)+v_dni;
+        document.getElementById("resultado").value=v_resul;    
+    }
+</script>
+<style>
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Para ocupar toda la altura de la ventana */
+    background: linear-gradient(to bottom, rgba(19, 20, 20, 0.9), rgba(255, 95, 2, 0.6)); /* Degradado oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Times New Roman', Times, serif ;
+    color: #000000;
+    font-size: 30px;
+  }
+
+  .contenido {
+    text-align: center;
+    margin: 20px;
+    
+  }
+
+  button{
+    font-size: 40px;
+    background-color: black;
+    color: #fff;
+    margin: 20px;
+  }
+
+</style>
+</head>
+<body>
+
+    <form action="" id="datos">
+        <div class="contenido">
+            <center><h1>Tarea</h1></center>
+          </div>
+          <hr color="black">
+        <center><table></center>
+            <tr>
+                <td>Ingresar los apellidos: </td>
+                <td><input type="text" name="" id="apellidos"></td>
+            </tr>
+            <tr>
+                <td>Ingresar nombres: </td>
+                <td><input type="text" name="" id="nombres"></td>
+            </tr>
+            <tr>
+                <td>Ingresar el DNI: </td>
+                <td><input type="text" name="" id="DNI"></td>
+            </tr>
+            <tr>
+                <td>Codigo Generado: </td>
+                <td><input type="text" name="" id="resultado"></td>
+            </tr> 
+        </table>
+    <hr color="black">
+    </form>
+    <button type="button" onclick="CargarDatos()">Cargar datos</button>
+
+</body>
+</html>

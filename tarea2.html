@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function CargarDatos()
+        {
+            var v_numero=prompt("Ingrese Numero");
+            document.getElementById("Numero").value=v_numero;
+            var contenido=" ";
+            for ( x=1 ; x<=12; x++){
+            contenido+= x +"x"+v_numero+"="+(x*v_numero)+"<br>";
+            }
+            document.getElementById('multi').innerHTML = contenido; 
+        }
+    </script>
+    <style>
+  body {
+
+    margin: 0;
+    padding: 10px;
+    height: 100vh; /* Para ocupar toda la altura de la ventana */
+    background: linear-gradient(to bottom, rgba(19, 20, 20, 0.9), rgba(0, 255, 191, 0.6)); /* Degradado oscuro */
+    display: flex;
+    justify-content: center;
+    font-family:'Times New Roman', Times, serif ;
+    color: #fffcfc;
+    font-size: 30px;
+  }
+
+  .contenido {
+    text-align: center;
+    margin: 20px;
+    
+  }
+
+  button{
+    font-size: 30px;
+    background-color: black;
+    color: #e7e7e7;
+    margin: 20px;
+  }
+    </style>
+</head>
+<body>
+    <form action="" id="Datos">
+    <div class="contenido">
+        <center><h1>Multiplicar</h1></center>
+      </div>
+      <hr color="black">
+         <center><table></center>
+            <td>El numero es :</td>
+            <td><input type="text" id="Numero"></td>
+        </tr>
+    </table>
+    <hr color="black">
+</form>
+    <button type="button" onclick="CargarDatos()">Cargar datos</button>
+    <div id="multi" >
+    </div>
+</body>
+</html>
